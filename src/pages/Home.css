@@ -2169,37 +2169,87 @@ body :not(.lux-hero):not(.lux-hero *) i {
 
 
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 780px;
-    min-height: 100svh;
-    background-position: 58% center;
+
+/* KOTTIKURRA — MOBILE CINEMATIC HERO FIX */
+@media (max-width: 700px) {
+  .lux-home .lux-hero {
+    min-height: 720px;
+    min-height: 88svh;
   }
 
-  .hero-content {
-    padding: 72px 24px 110px;
-    max-width: 100%;
+  .lux-home .lux-hero-inner {
+    justify-content: center;
+    padding: 48px 0 90px;
   }
 
-  .hero h1 {
-    font-size: clamp(34px, 9vw, 40px);
+  .lux-home .lux-hero-content {
+    max-width: 340px;
+  }
+
+  .lux-home .lux-hero-content h1 {
+    max-width: 330px;
+    margin: 16px 0;
+    font-size: 30px !important;
     line-height: 1.12;
-    letter-spacing: -1.2px;
-    max-width: 100%;
-    margin-bottom: 18px;
+    letter-spacing: -0.8px;
   }
 
-  .hero p {
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 100%;
-    margin-bottom: 26px;
+  .lux-home .lux-hero-content > p {
+    max-width: 290px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
-  .hero .primary-button {
-    width: 100%;
-    max-width: 320px;
-    min-height: 60px;
-    padding: 16px 20px;
+  .lux-home .lux-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .lux-home .lux-hero-actions .lux-btn {
+    min-height: 48px;
+    gap: 16px;
+    padding: 0 18px;
+    font-size: 11px;
+  }
+
+  .lux-home .lux-hero-secondary {
+    font-size: 11px;
+  }
+
+  .lux-home .lux-overline {
+    gap: 9px;
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+
+  .lux-home .lux-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(9, 25, 19, 0.42) 0%,
+        rgba(9, 25, 19, 0.12) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(9, 25, 19, 0.22) 0%,
+        transparent 55%
+      );
+  }
+
+  .lux-home .lux-scroll-link {
+    gap: 10px;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .lux-home .lux-scroll-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .lux-home .lux-hero-bottom {
+    bottom: 20px;
   }
 }
