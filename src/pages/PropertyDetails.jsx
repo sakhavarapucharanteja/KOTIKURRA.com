@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import "./PropertyDetails.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://koti-kurra-api.onrender.com";
 
 export default function PropertyDetails() {
   const { id } = useParams();

@@ -4,7 +4,7 @@ import { Search, SlidersHorizontal, Building2 } from "lucide-react";
 import PropertyCard from "../components/PropertyCard";
 import "./Projects.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://koti-kurra-api.onrender.com";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);

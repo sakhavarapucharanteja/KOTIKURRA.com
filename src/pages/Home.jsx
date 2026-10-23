@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import "./Home.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://koti-kurra-api.onrender.com";
 
 export default function Home() {
   const [featuredProjects, setFeaturedProjects] = useState([]);

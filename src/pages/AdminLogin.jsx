@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { LockKeyhole, Eye, EyeOff } from "lucide-react";
 import "./Admin.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://koti-kurra-api.onrender.com";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
