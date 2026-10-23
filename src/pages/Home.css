@@ -2179,7 +2179,7 @@ body :not(.lux-hero):not(.lux-hero *) i {
 
   .lux-home .lux-hero-inner {
     justify-content: center;
-    padding: 48px 0 90px;
+    padding: 80px 0 90px;
   }
 
   .lux-home .lux-hero-content {
