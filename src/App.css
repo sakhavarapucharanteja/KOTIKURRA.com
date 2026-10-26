@@ -3082,3 +3082,138 @@ h2 em {
     letter-spacing: 0.6px;
   }
 }
+
+
+
+/* MOBILE WIDTH FIX — KOTTIKURRA */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.site-header,
+.topbar,
+.lux-home {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .nav-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-inline: 16px;
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 58px);
+    gap: 9px;
+  }
+
+  .brand-copy {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand-copy strong {
+    font-size: clamp(13px, 4vw, 16px);
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .brand-copy small {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .brand-tagline {
+    max-width: 100%;
+    font-size: 7px;
+    letter-spacing: 0.25px;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .mobile-menu-button {
+    flex-shrink: 0;
+  }
+
+  .lux-home .lux-container,
+  .lux-home .lux-hero-inner,
+  .lux-home .lux-showcase-content {
+    width: calc(100% - 36px);
+    max-width: 100%;
+  }
+
+  .lux-home .lux-hero {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .lux-home .lux-hero-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .lux-home .lux-hero-content h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .lux-home .lux-hero-content > p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .lux-home .lux-hero-actions .lux-btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .lux-home .lux-intro,
+  .lux-home .lux-properties,
+  .lux-home .advisor-services,
+  .lux-home .lux-philosophy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .lux-home .lux-property-grid,
+  .lux-home .advisor-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lux-home .lux-property-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
