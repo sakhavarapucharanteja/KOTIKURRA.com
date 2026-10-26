@@ -41,8 +41,7 @@ export default function Navbar() {
 
             <span className="brand-copy">
               <strong>KOTTIKURRA</strong>
-              <small>REAL ESTATE</small>
-              <span>Independent Real Estate Property Advisor · Hyderabad</span>
+              <small>Independent Real Estate Property Advisor · Hyderabad</small>
             </span>
           </Link>
 
