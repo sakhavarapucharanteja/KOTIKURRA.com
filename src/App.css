@@ -2997,3 +2997,88 @@ h2 em {
   }
 }
 
+
+
+
+/* Brand identity: independent property advisor */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.brand-copy strong {
+  color: #18382d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.35;
+}
+
+.brand-copy small {
+  margin-top: 3px;
+  color: #777d75;
+  font-size: 9px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+}
+
+.brand-tagline {
+  margin-top: 5px;
+  color: #536b5c;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #b4c3ae;
+  color: #18382d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    font-size: 30px;
+  }
+
+  .brand-copy strong {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .brand-copy small {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .brand-tagline {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+  }
+}

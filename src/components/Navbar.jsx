@@ -30,13 +30,22 @@ export default function Navbar() {
 
       <header className="site-header">
         <div className="nav-inner">
-          <Link to="/" className="brand" onClick={closeMenu} aria-label="Kottikurra Real Estate home">
+          
+          <Link
+            to="/"
+            className="brand"
+            onClick={closeMenu}
+            aria-label="Kottikurra Real Estate Property Advisor in Hyderabad"
+          >
             <span className="brand-mark">K</span>
+
             <span className="brand-copy">
               <strong>KOTTIKURRA</strong>
               <small>REAL ESTATE</small>
+              <span>Independent Real Estate Property Advisor · Hyderabad</span>
             </span>
           </Link>
+
 
           <button
             className="mobile-menu-button"
