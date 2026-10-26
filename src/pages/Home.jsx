@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <div className="lux-home">
-      {/* HERO VIDEO — kept unchanged */}
+      {/* HERO VIDEO — independent property advisory */}
       <section className="lux-hero">
         <video
           className="lux-hero-video"
@@ -69,6 +69,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          preload="auto"
           poster="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=90"
         >
           <source src="/videos/luxury-home.mp4" type="video/mp4" />
@@ -80,29 +81,29 @@ export default function Home() {
           <div className="lux-hero-content">
             <div className="lux-overline lux-overline-light">
               <span className="lux-overline-rule" />
-              KOTTIKURRA REAL ESTATE · HYDERABAD
+              INDEPENDENT PROPERTY ADVISORY · HYDERABAD
             </div>
 
             <h1>
-              Exceptional spaces.
+              Your property journey.
               <br />
-              <em>Extraordinary living.</em>
+              <em>A more personal perspective.</em>
             </h1>
 
             <p>
-              Discover properties that reflect your aspirations. Thoughtful
-              choices, meaningful spaces, and a better way to find where you
-              belong.
+              Personal guidance for buying, selling, finding investment
+              properties, and exploring plots and land across Hyderabad.
+              Make your next property decision with greater confidence.
             </p>
 
             <div className="lux-hero-actions">
-              <Link to="/projects" className="lux-btn lux-btn-white">
-                Explore Our Properties
+              <Link to="/contact" className="lux-btn lux-btn-white">
+                Discuss Your Requirements
                 <ArrowUpRight size={18} />
               </Link>
 
-              <Link to="/contact" className="lux-hero-secondary">
-                Connect With Us
+              <Link to="/projects" className="lux-hero-secondary">
+                Explore Properties
                 <ArrowRight size={17} />
               </Link>
             </div>
@@ -113,11 +114,11 @@ export default function Home() {
               <span className="lux-scroll-icon">
                 <ArrowDown size={18} />
               </span>
-              SCROLL TO DISCOVER
+              DISCOVER OUR APPROACH
             </a>
 
             <div className="lux-hero-bottom-right">
-              <span>CURATED PROPERTY EXPERIENCES</span>
+              <span>INDEPENDENT PROPERTY GUIDANCE</span>
               <span className="lux-bottom-divider" />
               <span>HYDERABAD, INDIA</span>
             </div>
@@ -125,16 +126,18 @@ export default function Home() {
         </div>
 
         <span className="lux-hero-side-label">
-          A DIFFERENT PERSPECTIVE ON REAL ESTATE
+          PROPERTY ADVICE, WITH A PERSONAL TOUCH
         </span>
       </section>
 
-      {/* SINCE 2020 */}
+
+      
+      {/* INDEPENDENT PROPERTY ADVISORY */}
       <section className="lux-intro lux-container" id="lux-intro">
         <div className="lux-intro-label">
-          <span className="lux-section-index">01 / OUR JOURNEY</span>
+          <span className="lux-section-index">01 / OUR APPROACH</span>
           <span className="lux-mini-line" />
-          <span className="lux-section-index">EST. 2020</span>
+          <span className="lux-section-index">EXPERIENCE SINCE 1999</span>
         </div>
 
         <div className="lux-intro-main">
@@ -144,20 +147,92 @@ export default function Home() {
           </div>
 
           <h2>
-            Excellence in Real Estate
+            Real Estate Experience.
             <br />
-            <em>Since 2020.</em>
+            <em>Personal Guidance.</em>
           </h2>
 
           <div className="lux-intro-bottom">
             <p>
-              Since 2020, Kottikurra Real Estate has focused on helping people
-              explore property opportunities with thoughtful guidance,
-              transparent communication, and a personal approach.
+              With real estate experience dating back to 1999, Kottikurra
+              offers a personal, independent approach to property advisory
+              in Hyderabad. Whether you are buying a home, searching for
+              investment opportunities, selling a property, or exploring
+              plots and land, the focus is on understanding your needs and
+              helping you make informed property decisions.
             </p>
           </div>
         </div>
       </section>
+
+
+
+      {/* dedicated services section */}
+      <section className="advisor-services lux-section">
+        <div className="lux-container">
+          <div className="advisor-services-heading">
+            <div className="lux-overline">
+              <span className="lux-overline-rule" />
+              HOW WE CAN HELP
+            </div>
+
+            <h2>
+              Property decisions,
+              <br />
+              <em>with a personal perspective.</em>
+            </h2>
+
+            <p>
+              Practical, individual guidance shaped around your property
+              goals, priorities and plans in Hyderabad.
+            </p>
+          </div>
+
+          <div className="advisor-services-grid">
+            <article className="advisor-service">
+              <span className="advisor-service-number">01</span>
+              <h3>Buying Assistance</h3>
+              <p>
+                Explore suitable properties with guidance tailored
+                to your requirements, location and budget.
+              </p>
+              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+            </article>
+
+            <article className="advisor-service">
+              <span className="advisor-service-number">02</span>
+              <h3>Selling Assistance</h3>
+              <p>
+                Get personalised support as you assess your property
+                sale and consider your next steps.
+              </p>
+              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+            </article>
+
+            <article className="advisor-service">
+              <span className="advisor-service-number">03</span>
+              <h3>Plots &amp; Land</h3>
+              <p>
+                Explore land and plot opportunities with attention
+                to your intended use and requirements.
+              </p>
+              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+            </article>
+
+            <article className="advisor-service">
+              <span className="advisor-service-number">04</span>
+              <h3>Investment Property Search</h3>
+              <p>
+                Identify property options to research in line with
+                your objectives, budget and risk considerations.
+              </p>
+              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* FEATURED PROJECTS — loaded from MongoDB through the API */}
       <section
@@ -277,62 +352,26 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US — kept unchanged */}
-      <section className="lux-philosophy" id="why-choose-us">
-        <div className="lux-philosophy-image">
-          <img
-            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=90"
-            alt="Contemporary residential interior"
-            loading="lazy"
-          />
-          <span className="lux-image-tag">WHY KOTTIKURRA</span>
-        </div>
+      
+        <h2>
+          Real estate is personal.
+          <br />
+          <em>Your guidance should be too.</em>
+        </h2>
 
-        <div className="lux-philosophy-content">
-          <div className="lux-overline">
-            <span className="lux-overline-rule" />
-            WHY CHOOSE US
-          </div>
+        <p className="lux-philosophy-lead">
+          Independent advice. A direct conversation. A more personal
+          property journey.
+        </p>
 
-          <h2>
-            Property choices.
-            <br />
-            <em>With confidence.</em>
-          </h2>
+        <p className="lux-philosophy-body">
+          With real estate experience dating back to 1999, Kottikurra
+          brings an experienced perspective to property conversations
+          in Hyderabad. Every client's needs are different, so the
+          focus stays on listening, sharing clear information and
+          exploring appropriate options.
+        </p>
 
-          <p className="lux-philosophy-lead">
-            A thoughtful, personal approach to your property journey.
-          </p>
-
-          <p className="lux-philosophy-body">
-            We listen to your priorities, share clear information, and help you
-            explore property options that suit your needs.
-          </p>
-
-          <div className="lux-benefits">
-            <div>
-              <ShieldCheck size={21} />
-              <span>Transparent communication</span>
-              <Check size={15} />
-            </div>
-
-            <div>
-              <Compass size={21} />
-              <span>Guidance built around your needs</span>
-              <Check size={15} />
-            </div>
-
-            <div>
-              <Handshake size={21} />
-              <span>Support through your journey</span>
-              <Check size={15} />
-            </div>
-          </div>
-
-          <Link to="/contact" className="lux-btn lux-btn-dark">
-            Talk to Our Team <ArrowUpRight size={18} />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
