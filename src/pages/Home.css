@@ -2170,7 +2170,6 @@ body :not(.lux-hero):not(.lux-hero *) i {
 
 
 
-
 /* MOBILE HERO — VIDEO FIRST, TEXT SECOND */
 @media (max-width: 700px) {
   .lux-home .lux-hero {
@@ -2442,5 +2441,59 @@ body :not(.lux-hero):not(.lux-hero *) i {
 
   .advisor-service p {
     margin-bottom: 20px;
+  }
+}
+
+
+
+/* Fix philosophy section alignment and spacing */
+.lux-home .lux-philosophy,
+.lux-home .lux-philosophy-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lux-home .lux-philosophy .lux-container,
+.lux-home .lux-philosophy-section .lux-container {
+  width: min(100% - 48px, 1320px);
+  margin-inline: auto;
+}
+
+.lux-home .lux-philosophy h2,
+.lux-home .lux-philosophy-section h2 {
+  max-width: 760px;
+  line-height: 1.15;
+}
+
+.lux-home .lux-philosophy-lead,
+.lux-home .lux-philosophy-body {
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .lux-home .lux-philosophy .lux-container,
+  .lux-home .lux-philosophy-section .lux-container {
+    width: calc(100% - 40px);
+  }
+}
+
+
+
+.lux-home .lux-projects {
+  padding-bottom: 56px;
+}
+
+.lux-home .lux-philosophy {
+  padding-top: 64px;
+}
+
+@media (max-width: 700px) {
+  .lux-home .lux-projects {
+    padding-bottom: 36px;
+  }
+
+  .lux-home .lux-philosophy {
+    padding-top: 40px;
   }
 }
