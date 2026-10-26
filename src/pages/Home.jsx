@@ -351,26 +351,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US — kept unchanged */}
-      
-        <h2>
-          Real estate is personal.
-          <br />
-          <em>Your guidance should be too.</em>
-        </h2>
+      {/* WHY CHOOSE US — independent property advisory */}
+      <section className="lux-philosophy">
+        <div className="lux-philosophy-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85"
+            alt="Contemporary residential property in Hyderabad"
+            loading="lazy"
+          />
+          <span className="lux-image-tag">
+            INDEPENDENT PROPERTY ADVISORY
+          </span>
+        </div>
 
-        <p className="lux-philosophy-lead">
-          Independent advice. A direct conversation. A more personal
-          property journey.
-        </p>
+        <div className="lux-philosophy-content">
+          <div className="lux-overline">
+            <span className="lux-overline-rule" />
+            A PERSONAL APPROACH
+          </div>
 
-        <p className="lux-philosophy-body">
-          With real estate experience dating back to 1999, Kottikurra
-          brings an experienced perspective to property conversations
-          in Hyderabad. Every client's needs are different, so the
-          focus stays on listening, sharing clear information and
-          exploring appropriate options.
-        </p>
+          <h2>
+            Real estate is personal.
+            <br />
+            <em>Your guidance should be too.</em>
+          </h2>
+
+          <p className="lux-philosophy-lead">
+            Independent advice. A direct conversation. A more personal
+            property journey.
+          </p>
+
+          <p className="lux-philosophy-body">
+            With real estate experience dating back to 1999, Kottikurra
+            brings an experienced perspective to property conversations
+            in Hyderabad. Every client's needs are different, so the
+            focus stays on listening, sharing clear information and
+            exploring appropriate options.
+          </p>
+
+          <div className="lux-benefits">
+            <div>
+              <ShieldCheck size={19} />
+              <span>Clear and transparent communication</span>
+              <Check size={16} />
+            </div>
+            <div>
+              <Compass size={19} />
+              <span>Guidance tailored to your requirements</span>
+              <Check size={16} />
+            </div>
+            <div>
+              <Handshake size={19} />
+              <span>Personal support throughout your property journey</span>
+              <Check size={16} />
+            </div>
+          </div>
+
+          <Link to="/contact" className="lux-btn lux-btn-dark">
+            Let's Discuss Your Requirements
+            <ArrowUpRight size={18} />
+          </Link>
+        </div>
+      </section>
 
     </div>
   );

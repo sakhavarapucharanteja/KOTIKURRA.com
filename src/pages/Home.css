@@ -2497,3 +2497,28 @@ body :not(.lux-hero):not(.lux-hero *) i {
     padding-top: 40px;
   }
 }
+
+
+/* Correct spacing between featured projects and philosophy */
+.lux-home .lux-properties {
+  padding-bottom: 70px;
+}
+
+.lux-home .lux-philosophy {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 700px) {
+  .lux-home .lux-properties {
+    padding-bottom: 40px;
+  }
+
+  .lux-home .lux-philosophy {
+    padding-top: 0;
+  }
+
+  .lux-home .lux-philosophy-content {
+    padding: 42px 22px 50px;
+  }
+}
