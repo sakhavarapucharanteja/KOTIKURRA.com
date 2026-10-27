@@ -16,7 +16,7 @@ const CONTACT_EMAIL = "kotikurra9396211097@gmail.com";
 const CONTACT_PHONE = "+91 7780621225";
 
 const GOOGLE_SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbxOCLuY08vxoI7szuuOfmvfkgD-jxixjd-qw_plYch121wipHU_HC0LCTIxqzbKGNjd/exec";
+  "https://script.google.com/macros/s/AKfycbzDSGjBifI4_FR3n1qtfQ_4CsudU0A8HoIQLzNY0xH9haGVuTUGdUTsGfPEsqOwjiO9/exec";
 
 export default function Contact() {
   const [form, setForm] = useState({
