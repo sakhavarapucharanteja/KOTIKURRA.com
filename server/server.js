@@ -15,7 +15,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
   "https://koti-kurra-in.netlify.app",
-  "https://kotikurra.in/"
+  "https://kotikurra.in",
 ];
 
 app.use(
