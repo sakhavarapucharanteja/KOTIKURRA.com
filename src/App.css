@@ -3485,3 +3485,204 @@ body {
   object-fit: contain;
 }
 
+
+
+
+.success-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(16, 32, 25, 0.68);
+  backdrop-filter: blur(6px);
+  animation: successFadeIn 0.25s ease;
+}
+
+.success-popup {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 44px 34px 34px;
+  text-align: center;
+  background: #fbfaf6;
+  border: 1px solid #e5e2d8;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+  animation: successSlideIn 0.3s ease;
+}
+
+.success-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: #234637;
+  cursor: pointer;
+}
+
+.success-popup-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: #e6eee7;
+  color: #234637;
+}
+
+.success-popup .eyebrow {
+  margin-bottom: 12px;
+  color: #66806c;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.success-popup h2 {
+  margin: 0 0 14px;
+  color: #203e32;
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.success-popup-message {
+  margin: 0 0 26px;
+  color: #66736a;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.success-popup-button {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #234637;
+  background: #234637;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.success-popup-button:hover {
+  background: #315846;
+}
+
+.success-popup-close:focus-visible,
+.success-popup-button:focus-visible {
+  outline: 3px solid #8da894;
+  outline-offset: 3px;
+}
+
+@keyframes successFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes successSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .success-popup {
+    padding: 40px 22px 24px;
+  }
+
+  .success-popup h2 {
+    font-size: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success-popup-overlay,
+  .success-popup {
+    animation: none;
+  }
+}
+
+/* Center all success popup content */
+.success-popup {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: min(100%, 575px);
+  margin: auto;
+  padding: 42px 44px;
+}
+
+/* Center the success icon */
+.success-popup-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0 auto 26px;
+}
+
+/* Center the brand label */
+.success-popup .eyebrow {
+  width: 100%;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/* Center the heading */
+.success-popup h2 {
+  width: 100%;
+  margin: 0 0 18px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Center the description */
+.success-popup-message {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Center the button */
+.success-popup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .success-popup {
+    padding: 38px 24px 28px;
+  }
+}
+
+.success-popup .eyebrow {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto 20px !important;
+  padding: 0 !important;
+  align-self: center !important;
+  box-sizing: border-box;
+}

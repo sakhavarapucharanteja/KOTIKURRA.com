@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, MapPin, Phone, Mail } from "lucide-react";
 
-const PHONE_DISPLAY = "+91 XXXXX XXXXX"; // Replace with real phone
-const PHONE_LINK = "91XXXXXXXXXX"; // Digits only, with country code
-const EMAIL = "info@kottikurra.com"; // Replace if needed
+const PHONE_DISPLAY = "+91 7780621225";
+const PHONE_LINK = "917780621225";
+const EMAIL = "kotikurra9396211097@gmail.com";
 
 export default function Footer() {
   return (

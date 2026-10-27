@@ -9,9 +9,13 @@ import {
   Eye,
   Building2,
   MapPin,
-  Handshake,
 } from "lucide-react";
 import "./About.css";
+
+const WHATSAPP_NUMBER = "917780621225";
+
+const WHATSAPP_LINK = (message) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 export default function About() {
   const values = [
@@ -19,52 +23,52 @@ export default function About() {
       icon: ShieldCheck,
       title: "Transparent Communication",
       description:
-        "Clear conversations and relevant information to help you evaluate your property options.",
+        "Clear conversations and relevant property information to help you evaluate your options with confidence.",
     },
     {
       icon: HeartHandshake,
       title: "Personal Attention",
       description:
-        "Your budget, priorities and preferences guide the property search and discussion.",
+        "Your budget, priorities and preferences guide every property discussion and recommendation.",
     },
     {
       icon: Compass,
-      title: "Thoughtful Guidance",
+      title: "Independent Property Guidance",
       description:
-        "Compare suitable options and understand the next steps before making a property decision.",
+        "Explore suitable properties and understand your options with personalised, independent guidance.",
     },
     {
       icon: Eye,
       title: "Attention to Detail",
       description:
-        "Consider location, property details, suitability and documentation as part of your decision.",
+        "Consider location, property details, suitability and documentation before making a decision.",
     },
   ];
 
   const services = [
     {
       number: "01",
-      title: "Buying Assistance",
+      title: "Layout Plotting Projects",
       description:
-        "Explore property options based on your requirements, preferred location and budget.",
+        "Explore residential plots and layout projects based on your preferred location, budget and property goals.",
     },
     {
       number: "02",
-      title: "Investment Property Search",
+      title: "Farmlands",
       description:
-        "Find properties to evaluate in line with your investment objectives and risk preferences.",
+        "Discover farmland options for your intended use, long-term plans and land ownership objectives.",
     },
     {
       number: "03",
-      title: "Selling Assistance",
+      title: "Flats & Apartments",
       description:
-        "Discuss your selling requirements and explore the next steps for your property.",
+        "Explore flats and apartments suited to your lifestyle, family requirements and budget.",
     },
     {
       number: "04",
-      title: "Plots & Land Advisory",
+      title: "Villas",
       description:
-        "Explore plots and land according to your intended use and property goals.",
+        "Find villa options that align with your preferred neighbourhood, space requirements and lifestyle.",
     },
   ];
 
@@ -83,24 +87,33 @@ export default function About() {
         <div className="about-hero-content">
           <p className="about-eyebrow">
             <span />
-            INDEPENDENT PROPERTY ADVISORY · HYDERABAD
+            INDEPENDENT PROPERTY ADVISOR · HYDERABAD
           </p>
 
           <h1>
-            Real estate is personal.
+            Experience that matters.
             <br />
-            <em>Your guidance should be too.</em>
+            <em>Guidance you can trust.</em>
           </h1>
 
           <p className="about-hero-description">
-            A personal approach to buying, selling, investment property
-            searches, and exploring plots and land in Hyderabad.
+            Led by Koteswararao Kurra, Kotikurra Real Estate brings
+            decades of property experience to layout plotting projects,
+            farmlands, flats and villas across Hyderabad and surrounding
+            areas.
           </p>
 
-          <Link to="/contact" className="about-primary-button">
+          <a
+            href={WHATSAPP_LINK(
+              "Hello Kotikurra Real Estate, I would like to discuss my property requirements."
+            )}
+            className="about-primary-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Discuss Your Requirements
             <ArrowUpRight size={18} />
-          </Link>
+          </a>
         </div>
 
         <span className="about-hero-location">
@@ -108,51 +121,52 @@ export default function About() {
         </span>
       </section>
 
-      {/* OUR APPROACH */}
+      {/* OUR STORY */}
       <section className="about-story section-wrap">
         <div className="about-story-image">
           <img
             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85"
-            alt="Modern home surrounded by landscaped outdoor spaces"
+            alt="Modern home with landscaped outdoor spaces"
             loading="lazy"
           />
           <div className="about-image-caption">
-            A MORE PERSONAL PROPERTY JOURNEY
+            PROPERTY EXPERIENCE SINCE 1999
           </div>
         </div>
 
         <div className="about-story-copy">
           <p className="about-eyebrow dark">
             <span />
-            OUR APPROACH
+            MEET YOUR PROPERTY ADVISOR
           </p>
 
           <h2>
-            Your goals deserve a
+            Koteswararao Kurra
             <br />
-            <em>thoughtful approach.</em>
+            <em>Independent Property Advisor.</em>
           </h2>
 
           <p>
-            Kottikurra Real Estate takes an independent, personal
-            approach to property advisory in Hyderabad. Every buyer,
-            seller and investor has different priorities, and we believe
-            those priorities should shape the conversation.
+            With real estate experience dating back to 1999, Koteswararao
+            Kurra offers an independent and personal approach to property
+            advisory in Hyderabad. His focus is on understanding each
+            client's requirements and helping them explore property
+            options suited to their individual goals.
           </p>
 
           <p>
-            With real estate experience dating back to 1999, our
-            approach centres on understanding your requirements,
-            discussing available options and helping you make informed
-            decisions. The aim is to make your property journey clearer,
-            more considered and better aligned with your needs.
+            From layout plotting projects and farmlands to flats and
+            villas, Kotikurra Real Estate helps buyers explore different
+            property categories with personal attention, clear
+            communication and thoughtful guidance throughout their
+            property search.
           </p>
 
           <div className="about-experience">
-            <strong>1999</strong>
+            <strong>26+</strong>
             <span>
-              Experience in real estate
-              <small>Personal guidance. Individual attention.</small>
+              Years of real estate experience
+              <small>Established experience dating back to 1999</small>
             </span>
           </div>
 
@@ -162,32 +176,36 @@ export default function About() {
         </div>
       </section>
 
-      {/* ADVISORY SERVICES */}
+      {/* PROPERTY CATEGORIES */}
       <section className="about-services">
         <div className="section-wrap">
           <div className="about-section-heading">
             <div>
               <p className="about-eyebrow dark">
                 <span />
-                HOW WE CAN HELP
+                OUR PROPERTY SPECIALITIES
               </p>
 
               <h2>
-                Your property goals.
+                Different properties.
                 <br />
-                <em>Our personal approach.</em>
+                <em>One personal approach.</em>
               </h2>
             </div>
 
             <p>
-              Support shaped around what you want to buy, sell or
-              explore in Hyderabad.
+              Independent guidance to help you explore property
+              opportunities in Hyderabad according to your requirements
+              and preferences.
             </p>
           </div>
 
           <div className="about-services-grid">
             {services.map((service) => (
-              <article className="about-service-card" key={service.number}>
+              <article
+                className="about-service-card"
+                key={service.number}
+              >
                 <span className="about-service-number">
                   {service.number}
                 </span>
@@ -196,9 +214,16 @@ export default function About() {
 
                 <p>{service.description}</p>
 
-                <Link to="/contact" aria-label={`Enquire about ${service.title}`}>
+                <a
+                  href={WHATSAPP_LINK(
+                    `Hello Kotikurra Real Estate, I would like to enquire about ${service.title}.`
+                  )}
+                  aria-label={`Enquire about ${service.title}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Discuss your needs <ArrowUpRight size={17} />
-                </Link>
+                </a>
               </article>
             ))}
           </div>
@@ -216,15 +241,16 @@ export default function About() {
               </p>
 
               <h2>
-                Principles behind
+                Built on experience.
                 <br />
-                <em>every conversation.</em>
+                <em>Guided by your needs.</em>
               </h2>
             </div>
 
             <p>
-              Property decisions deserve careful thought, clear
-              information and a conversation that puts your needs first.
+              Property decisions deserve careful consideration,
+              transparent communication and an advisor who understands
+              your priorities.
             </p>
           </div>
 
@@ -256,20 +282,29 @@ export default function About() {
           </p>
 
           <h2>
-            Let's talk about
+            Looking for the
             <br />
-            <em>what comes next.</em>
+            <em>right property?</em>
           </h2>
 
           <p className="about-cta-description">
-            Tell us what you are looking for. Start a conversation
-            about your property requirements in Hyderabad.
+            Connect with Koteswararao Kurra to discuss layout plots,
+            farmlands, flats or villas in Hyderabad. Tell us what you
+            are looking for and start a personalised property
+            conversation.
           </p>
 
-          <Link to="/contact" className="about-primary-button">
+          <a
+            href={WHATSAPP_LINK(
+              "Hello Koteswararao Kurra, I would like to discuss my property requirements in Hyderabad."
+            )}
+            className="about-primary-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Talk to Your Property Advisor
             <ArrowUpRight size={18} />
-          </Link>
+          </a>
         </div>
 
         <div className="about-cta-icon" aria-hidden="true">

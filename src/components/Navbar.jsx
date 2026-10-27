@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // Replace with the real number
+const WHATSAPP_NUMBER = "917780621225";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,9 +73,13 @@ export default function Navbar() {
                 {item.label}
               </NavLink>
             ))}
-            <Link to="/contact" className="nav-cta" onClick={closeMenu}>
+            <a
+              href="tel:+917780621225"
+              className="nav-cta"
+              onClick={closeMenu}
+            >
               Let's Talk <ArrowUpRight size={16} />
-            </Link>
+            </a>
           </nav>
         </div>
       </header>

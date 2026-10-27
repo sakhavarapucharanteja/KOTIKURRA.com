@@ -14,6 +14,7 @@ import {
 import "./Home.css";
 
 const API_URL = "https://koti-kurra-api.onrender.com";
+const WHATSAPP_NUMBER = "917780621225";
 
 export default function Home() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -97,10 +98,17 @@ export default function Home() {
             </p>
 
             <div className="lux-hero-actions">
-              <Link to="/contact" className="lux-btn lux-btn-white">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+                )}`}
+                className="lux-btn lux-btn-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Discuss Your Requirements
                 <ArrowUpRight size={18} />
-              </Link>
+              </a>
 
               <Link to="/projects" className="lux-hero-secondary">
                 Explore Properties
@@ -196,7 +204,15 @@ export default function Home() {
                 Explore suitable properties with guidance tailored
                 to your requirements, location and budget.
               </p>
-              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discuss your needs <ArrowUpRight size={16} />
+              </a>
             </article>
 
             <article className="advisor-service">
@@ -206,7 +222,15 @@ export default function Home() {
                 Get personalised support as you assess your property
                 sale and consider your next steps.
               </p>
-              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discuss your needs <ArrowUpRight size={16} />
+              </a>
             </article>
 
             <article className="advisor-service">
@@ -216,7 +240,15 @@ export default function Home() {
                 Explore land and plot opportunities with attention
                 to your intended use and requirements.
               </p>
-              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discuss your needs <ArrowUpRight size={16} />
+              </a>
             </article>
 
             <article className="advisor-service">
@@ -226,7 +258,15 @@ export default function Home() {
                 Identify property options to research in line with
                 your objectives, budget and risk considerations.
               </p>
-              <Link to="/contact">Discuss your needs <ArrowUpRight size={16} /></Link>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discuss your needs <ArrowUpRight size={16} />
+              </a>
             </article>
           </div>
         </div>
@@ -407,10 +447,17 @@ export default function Home() {
             </div>
           </div>
 
-          <Link to="/contact" className="lux-btn lux-btn-dark">
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+              "Hello Kotikurra Real Estate, I would like to discuss my requirements."
+            )}`}
+            className="lux-btn lux-btn-dark"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Let's Discuss Your Requirements
             <ArrowUpRight size={18} />
-          </Link>
+          </a>
         </div>
       </section>
 
