@@ -16,7 +16,7 @@ const CONTACT_EMAIL = "kotikurra9396211097@gmail.com";
 const CONTACT_PHONE = "+91 7780621225";
 
 const GOOGLE_SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbzuT5k-uU4L_xTvbgMofZLkFBbHPlp-IEpkkBXIQ7ZffdwAgG-QxmaEu_YA3IJKf6U4/exec";
+  "https://script.google.com/macros/s/AKfycbw8C3yBWAJM8MvJpy7kXlErtD9JCjd7-ve2jGLgAu05IIasCuYcL1QHHRMs4MPwW1Si/exec";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -41,7 +41,6 @@ export default function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
     setError("");
 
     const name = form.name.trim();
@@ -58,9 +57,11 @@ export default function Contact() {
       return;
     }
 
-    if (!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(
-      GOOGLE_SHEETS_URL
-    )) {
+    if (
+      !/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(
+        GOOGLE_SHEETS_URL
+      )
+    ) {
       setError("The Google Sheets URL is not configured correctly.");
       return;
     }
@@ -68,24 +69,25 @@ export default function Contact() {
     setSubmitting(true);
 
     try {
+      // Field names must match the Google Apps Script.
+      const enquiryData = {
+        customerName: name,
+        phone: phone,
+        interest: form.interest,
+        requirements: requirements,
+      };
+
       const response = await fetch(GOOGLE_SHEETS_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
           "Content-Type": "text/plain;charset=utf-8",
         },
-        body: JSON.stringify({
-          name,
-          phone,
-          interest: form.interest,
-          requirements,
-        }),
+        body: JSON.stringify(enquiryData),
       });
 
-      /*
-       * A no-cors response is opaque. The browser cannot confirm
-       * whether Google Apps Script successfully saved the enquiry.
-       */
+      // A no-cors response cannot confirm whether Google
+      // Apps Script saved the enquiry successfully.
       if (response.type !== "opaque" && !response.ok) {
         throw new Error("Enquiry submission failed.");
       }
