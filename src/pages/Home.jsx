@@ -143,7 +143,7 @@ export default function Home() {
         <div className="lux-intro-main">
           <div className="lux-overline">
             <span className="lux-overline-rule" />
-            KOTTIKURRA REAL ESTATE
+            KOTIKURRA REAL ESTATE
           </div>
 
           <h2>
@@ -154,7 +154,7 @@ export default function Home() {
 
           <div className="lux-intro-bottom">
             <p>
-              With real estate experience dating back to 1999, Kottikurra
+              With real estate experience dating back to 1999, Kotikurra
               offers a personal, independent approach to property advisory
               in Hyderabad. Whether you are buying a home, searching for
               investment opportunities, selling a property, or exploring
@@ -244,7 +244,7 @@ export default function Home() {
             <div>
               <div className="lux-overline">
                 <span className="lux-overline-rule" />
-                KOTTIKURRA REAL ESTATE
+                KOTIKURRA REAL ESTATE
               </div>
 
               <h2>
@@ -382,7 +382,7 @@ export default function Home() {
           </p>
 
           <p className="lux-philosophy-body">
-            With real estate experience dating back to 1999, Kottikurra
+            With real estate experience dating back to 1999, Kotikurra
             brings an experienced perspective to property conversations
             in Hyderabad. Every client's needs are different, so the
             focus stays on listening, sharing clear information and

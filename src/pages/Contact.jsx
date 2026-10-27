@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, Clock, ArrowUpRight, Send } from "lucide-react";
 
 const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // Replace with real WhatsApp number
-const CONTACT_EMAIL = "info@kottikurra.com"; // Replace with real email
+const CONTACT_EMAIL = "info@kotikurra.com"; // Replace with real email
 const CONTACT_PHONE = "+91 XXXXX XXXXX"; // Replace with real phone number
 
 export default function Contact() {
@@ -34,7 +34,7 @@ export default function Contact() {
     }
 
     const message = [
-      "Hello Kottikurra Real Estate,",
+      "Hello Kotikurra Real Estate,",
       "",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,

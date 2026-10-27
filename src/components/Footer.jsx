@@ -10,13 +10,20 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand-column">
+          
           <Link to="/" className="brand footer-brand">
-            <span className="brand-mark">K</span>
+            <img
+              src="/kottikurra-icon.png"
+              alt="Kottikurra Real Estate logo"
+              className="footer-logo-icon"
+            />
+
             <span className="brand-copy">
-              <strong>KOTTIKURRA</strong>
-              <small>REAL ESTATE</small>
+              <strong>KOTIKURRA</strong>
+              <small>Independent Real Estate Property Advisor · Hyderabad</small>
             </span>
           </Link>
+
           <p>
             Helping you explore properties and make informed real estate
             decisions with clarity, care, and confidence.
@@ -44,7 +51,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Kottikurra Real Estate. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Kotikurra Real Estate. All rights reserved.</span>
         <span>Designed with care for better living.</span>
       </div>
     </footer>

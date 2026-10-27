@@ -408,7 +408,7 @@ export default function AdminDashboard() {
       <aside className="admin-sidebar">
         <div className="admin-sidebar-brand">
           <div className="admin-login-logo">K</div>
-          <strong>KOTTIKURRA</strong>
+          <strong>KOTIKURRA</strong>
           <small>ADMINISTRATION</small>
         </div>
         <nav className="admin-sidebar-nav" aria-label="Admin dashboard sections">
@@ -443,7 +443,7 @@ export default function AdminDashboard() {
       <main className="admin-dashboard-main">
         <header className="admin-dashboard-header">
           <div>
-            <p className="admin-dashboard-eyebrow">KOTTIKURRA REAL ESTATE</p>
+            <p className="admin-dashboard-eyebrow">KOTIKURRA REAL ESTATE</p>
             <h1>Dashboard</h1>
             <p>Manage your projects and website content.</p>
           </div>
@@ -463,7 +463,7 @@ export default function AdminDashboard() {
             <div>
               <span className="admin-overview-kicker">YOUR PROPERTY WORKSPACE</span>
               <h2>Good to see you, {username}.</h2>
-              <p>Here's a quick look at your Kottikurra projects and website content.</p>
+              <p>Here's a quick look at your Kotikurra projects and website content.</p>
             </div>
             <div className="admin-overview-welcome-icon"><Building2 size={30} /></div>
           </div>

@@ -66,7 +66,7 @@ export default function AdminLogin() {
       <section className="admin-login-card">
         <div className="admin-login-brand">
           <div className="admin-login-logo">K</div>
-          <span>KOTTIKURRA</span>
+          <span>KOTIKURRA</span>
           <small>REAL ESTATE</small>
         </div>
 

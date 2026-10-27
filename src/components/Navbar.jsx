@@ -31,19 +31,25 @@ export default function Navbar() {
       <header className="site-header">
         <div className="nav-inner">
           
+          
           <Link
             to="/"
             className="brand"
             onClick={closeMenu}
             aria-label="Kottikurra Real Estate Property Advisor in Hyderabad"
           >
-            <span className="brand-mark">K</span>
+            <img
+              src="/kottikurra-icon.png"
+              alt="Kottikurra Real Estate logo"
+              className="brand-logo-icon"
+            />
 
             <span className="brand-copy">
-              <strong>KOTTIKURRA</strong>
+              <strong>KOTIKURRA</strong>
               <small>Independent Real Estate Property Advisor · Hyderabad</small>
             </span>
           </Link>
+
 
 
           <button
