@@ -39,8 +39,8 @@ export default function Navbar() {
             aria-label="Kottikurra Real Estate Property Advisor in Hyderabad"
           >
             <img
-              src="/kottikurra-icon.png"
-              alt="Kottikurra Real Estate logo"
+              src="/kotikurra-icon.png"
+              alt="Kotikurra Real Estate logo"
               className="brand-logo-icon"
             />
 

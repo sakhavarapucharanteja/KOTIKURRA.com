@@ -13,8 +13,8 @@ export default function Footer() {
           
           <Link to="/" className="brand footer-brand">
             <img
-              src="/kottikurra-icon.png"
-              alt="Kottikurra Real Estate logo"
+              src="/kotikurra-icon.png"
+              alt="Kotikurra Real Estate logo"
               className="footer-logo-icon"
             />
 
