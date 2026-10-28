@@ -1,184 +1,449 @@
 
+/* ==========================================
+   KOTIKURRA REAL ESTATE - ADMIN LOGIN
+========================================== */
+
 .admin-login-page {
   min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 18px;
-  background: #f4f5f1;
+  padding: 30px 18px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background-color: #142b22;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(12, 35, 26, 0.12),
+      rgba(12, 25, 20, 0.08)
+    ),
+    url("/kotikurra-admin-bg.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Subtle background overlay */
+.admin-login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    rgba(9, 27, 20, 0.12),
+    transparent 65%
+  );
+}
+
+/* ==========================================
+   FROSTED GLASS LOGIN CARD
+========================================== */
+
+
+/* Premium frosted-glass login card */
 .admin-login-card {
   width: 100%;
-  max-width: 440px;
+  max-width: 460px;
+  box-sizing: border-box;
   padding: 40px;
-  background: #fff;
-  border: 1px solid #e7e9e3;
-  border-radius: 18px;
-  box-shadow: 0 18px 60px rgba(25, 43, 34, 0.08);
+  position: relative;
+  z-index: 1;
+
+  /* Brighter, more readable glass */
+  background: rgba(255, 253, 248, 0.76);
+  -webkit-backdrop-filter: blur(28px) saturate(135%);
+  backdrop-filter: blur(28px) saturate(135%);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.24),
+    0 8px 24px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
+
+
+/* ==========================================
+   COMPANY BRANDING
+========================================== */
 
 .admin-login-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #234c3b;
+  margin-bottom: 28px;
+
+  color: #173d30;
   font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
+.admin-login-logo-image {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+
+  filter: drop-shadow(0 3px 8px rgba(255, 255, 255, 0.2));
+}
+
+/* Fallback for the original letter logo */
 .admin-login-logo {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   margin-bottom: 12px;
+
   border-radius: 50%;
-  background: #234c3b;
-  color: white;
+  background: #204b3b;
+  color: #f4e5bd;
+
   font-family: Georgia, serif;
-  font-size: 27px;
+  font-size: 29px;
+
+  box-shadow: 0 5px 18px rgba(32, 75, 59, 0.18);
+}
+
+.admin-login-brand span {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
 .admin-login-brand small {
   margin-top: 5px;
-  color: #7a857c;
+  color: #5f604f;
   font-size: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
 
+/* ==========================================
+   LOGIN HEADING
+========================================== */
+
 .admin-login-heading {
-  margin: 34px 0 26px;
+  margin: 24px 0 28px;
   text-align: center;
 }
 
 .admin-login-icon {
   display: inline-grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  background: #edf3ee;
-  color: #234c3b;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 13px;
+
+  border-radius: 14px;
+  background: rgba(234, 240, 233, 0.78);
+  color: #204b3b;
 }
 
 .admin-login-heading h1 {
-  margin: 0 0 9px;
-  color: #1f3027;
-  font-size: 26px;
-  font-weight: 600;
+  margin: 0 0 10px;
+  color: #173d30;
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
 }
 
 .admin-login-heading p {
   margin: 0;
-  color: #737c75;
+  color: #38483f;
   font-size: 14px;
   line-height: 1.6;
 }
+
+/* ==========================================
+   LOGIN FORM
+========================================== */
 
 .admin-login-card form {
   display: flex;
   flex-direction: column;
 }
 
-.admin-login-card form label {
-  margin: 0 0 8px;
-  color: #34443a;
+.admin-login-card form > label {
+  margin: 0 0 9px;
+  color: #203b2e;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .admin-login-card form input {
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
-  height: 46px;
-  margin-bottom: 20px;
-  padding: 0 13px;
-  border: 1px solid #dce1da;
-  border-radius: 8px;
+  height: 50px;
+  padding: 0 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
   outline: none;
-  background: #fff;
-  color: #26352b;
-  font: inherit;
+
+  background: rgba(255, 255, 255, 0.56);
+  color: #203b2e;
+
+  font-family: inherit;
   font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-login-card form input::placeholder {
+  color: #5d655f;
+  opacity: 1;
+}
+
+.admin-login-card form > input {
+  margin-bottom: 21px;
 }
 
 .admin-login-card form input:focus {
-  border-color: #416d54;
-  box-shadow: 0 0 0 3px rgba(65, 109, 84, 0.1);
+  border-color: #497b5f;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 0 0 4px rgba(73, 123, 95, 0.15);
 }
+
+/* ==========================================
+   PASSWORD VISIBILITY TOGGLE
+========================================== */
 
 .admin-password-field {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .admin-password-field input {
-  padding-right: 46px !important;
+  padding-right: 48px;
+  margin-bottom: 0;
 }
 
 .admin-password-toggle {
   position: absolute;
-  right: 8px;
-  top: 0;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
   display: grid;
   place-items: center;
   width: 34px;
-  height: 46px;
-  border: 0;
+  height: 38px;
+  padding: 0;
+
+  border: none;
+  border-radius: 6px;
   background: transparent;
-  color: #69756c;
+  color: #385447;
+
   cursor: pointer;
 }
+
+.admin-password-toggle:hover {
+  color: #16392c;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* ==========================================
+   SIGN IN BUTTON
+========================================== */
 
 .admin-login-submit {
   width: 100%;
-  min-height: 48px;
+  min-height: 51px;
+  padding: 12px 18px;
   margin-top: 4px;
-  border: 0;
-  border-radius: 8px;
-  background: #234c3b;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: #204b3b;
   color: #fff;
+
+  font-family: inherit;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
+
   cursor: pointer;
-  transition: background 0.2s ease;
+
+  box-shadow: 0 5px 16px rgba(20, 55, 40, 0.16);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.admin-login-submit:hover {
-  background: #183a2b;
+.admin-login-submit:hover:not(:disabled) {
+  background: #16392c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(32, 75, 59, 0.24);
 }
 
 .admin-login-submit:disabled {
-  cursor: wait;
   opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
 .admin-login-error {
-  margin: 0 0 16px;
-  padding: 11px 12px;
-  border: 1px solid #f1cccc;
-  border-radius: 7px;
-  background: #fff2f2;
-  color: #a52828;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(180, 50, 50, 0.35);
+  border-radius: 9px;
+  background: rgba(255, 239, 239, 0.92);
+  color: #942626;
+
   font-size: 13px;
   line-height: 1.5;
 }
 
+/* ==========================================
+   FOOTER
+========================================== */
+
 .admin-login-footer {
   margin: 25px 0 0;
-  color: #8a928c;
-  font-size: 12px;
   text-align: center;
+  color: #46594d;
+  font-size: 12px;
 }
 
-@media (max-width: 480px) {
-  .admin-login-card {
-    padding: 28px 22px;
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .admin-login-page {
+    justify-content: center;
+    padding: 30px 20px;
+    background-position: center;
   }
+
+  .admin-login-card {
+    max-width: 440px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 520px) {
+  .admin-login-page {
+    min-height: 100vh;
+    padding: 22px 14px;
+    background-position: center;
+  }
+
+  .admin-login-card {
+    max-width: 420px;
+    padding: 30px 23px;
+    border-radius: 20px;
+
+    background: rgba(255, 253, 248, 0.78);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .admin-login-brand {
+    margin-bottom: 24px;
+  }
+
+  .admin-login-logo-image {
+    width: 68px;
+    height: 68px;
+  }
+
+  .admin-login-heading {
+    margin: 22px 0 24px;
+  }
+
+  .admin-login-heading h1 {
+    font-size: 25px;
+  }
+}
+
+/* ==========================================
+   SHORT SCREENS
+========================================== */
+
+@media (max-height: 650px) {
+  .admin-login-page {
+    align-items: flex-start;
+  }
+
+  .admin-login-card {
+    margin: 10px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .admin-login-brand {
+    margin-bottom: 18px;
+  }
+
+  .admin-login-heading {
+    margin: 18px 0;
+  }
+
+  .admin-login-footer {
+    margin-top: 18px;
+  }
+}
+
+
+
+/* Improve contrast over the glass */
+.admin-login-brand,
+.admin-login-heading h1 {
+  color: #173d30;
+}
+
+.admin-login-brand small {
+  color: #6b6049;
+}
+
+.admin-login-heading p {
+  color: #435249;
+}
+
+.admin-login-card form > label {
+  color: #203b2e;
+}
+
+.admin-login-footer {
+  color: #526257;
+}
+
+/* Keep input fields clean and readable */
+.admin-login-card form input {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(32, 75, 59, 0.16);
+}
+
+.admin-login-card form input::placeholder {
+  color: #737b75;
 }
