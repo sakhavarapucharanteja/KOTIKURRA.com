@@ -407,7 +407,11 @@ export default function AdminDashboard() {
     <div className="admin-dashboard">
       <aside className="admin-sidebar">
         <div className="admin-sidebar-brand">
-          <div className="admin-login-logo">K</div>
+          <img
+            src="/kotikurra-icon.png"
+            alt="Kotikurra Real Estate"
+            className="admin-sidebar-logo"
+          />
           <strong>KOTIKURRA</strong>
           <small>ADMINISTRATION</small>
         </div>
@@ -448,7 +452,13 @@ export default function AdminDashboard() {
             <p>Manage your projects and website content.</p>
           </div>
           <div className="admin-user">
-            <div className="admin-user-avatar">{username.charAt(0).toUpperCase()}</div>
+            
+            <img
+              src="/kotikurra-icon.png"
+              alt="Kotikurra Real Estate"
+              className="admin-user-avatar"
+            />
+
             <span>{username}</span>
           </div>
         </header>
